@@ -10,6 +10,7 @@ const RestaurantCard = (props) => {
       sla
     } = props.resData?.info
 
+
     
     return (
         <div className="res-card">

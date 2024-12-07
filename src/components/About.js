@@ -5,15 +5,12 @@ class About extends React.Component {
 
     constructor(props){
         super(props)
-        console.log('parent constructor')
     }
 
     componentDidMount(){
-        console.log('parent didmount')
     }
 
     render(){
-        console.log('parent render')
         return (
             <div className="about-container">
                 <h1>About Page</h1>
