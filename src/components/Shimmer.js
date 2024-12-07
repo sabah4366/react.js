@@ -1,4 +1,4 @@
-const Shimmer = () =>{
+const Shimmer = () => {
 
     return (
         <div className="shimmer-container">
@@ -86,7 +86,7 @@ const Shimmer = () =>{
                 <h4 className="shimmer-supersubheading"></h4>
                 <h4 className="shimmer-supersubheading"></h4>
             </div>
-            
+
             
         </div>
     )

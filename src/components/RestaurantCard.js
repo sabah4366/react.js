@@ -1,4 +1,5 @@
 import { CDN_URL  } from "../utils/constants";
+
 const RestaurantCard = (props) => {
     const {
       name,
@@ -8,6 +9,7 @@ const RestaurantCard = (props) => {
       avgRating,
       sla
     } = props.resData?.info
+
     
     return (
         <div className="res-card">
