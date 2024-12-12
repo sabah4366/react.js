@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Namasthe Js",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index.html ",
     "build": "parcel build index.html",
     "test": "jest"
   },
@@ -11,7 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.13.2",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.16"
   },
   "dependencies": {
     "react": "^18.3.1",
