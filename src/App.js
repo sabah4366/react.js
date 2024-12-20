@@ -9,6 +9,9 @@ import { BrowserRouter , Routes ,Route, Outlet } from "react-router";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from './utils/appStore'
+import Cart from "./components/Cart";
 
 const Grocery = lazy(() => import("./components/Grocery"))
 
@@ -25,11 +28,12 @@ const AppLayout = () => {
     return (
         <div className="app">
             {/* we can also pass setUserName updating function */}
-            <UserContext.Provider value={{loggedInUser : userName, setUserName}}>
-            <Header/>
-            <Outlet/>
-            </UserContext.Provider>
-            
+            <Provider store={appStore} >
+                <UserContext.Provider value={{loggedInUser : userName, setUserName}}>
+                    <Header/>
+                    <Outlet/>
+                </UserContext.Provider>
+            </Provider>
         </div>
     )
 }
@@ -41,6 +45,7 @@ root.render(
                 <Route index element={<Body />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/cart" element={<Cart />} />
                 <Route path="/grocery" element={
                     <Suspense fallback={ <Shimmer />}>
                         <Grocery />
